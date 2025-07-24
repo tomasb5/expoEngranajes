@@ -22,12 +22,10 @@
                 <h1>TEST DE ENGRANAJES</h1>
                 <div class="progress">Pregunta <span id="current-question">1</span>/8</div>
             </header>
-
             <section class="question-section">
                 <h2 id="question-text"></h2>
                 <div id="options-container" class="options-grid"></div>
             </section>
-
             <footer class="quiz-footer">
                 <button id="next-btn" class="action-btn">→</button>
             </footer>
@@ -38,10 +36,21 @@
     <div id="result-screen" class="screen">
         <div class="result-card">
             <h1>🏆 RESULTADO</h1>
-            <p class="score" id="score"></p>     
-           </div>
+            <p class="score" id="score"></p>
+            <button id="review-btn" class="industrial-btn">🔍 VER REVISIÓN</button>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Revisión -->
+    <div id="review-screen" class="screen scrollable">
+        <div class="review-card">
+            <h2>📝 Revisión Detallada</h2>
+            <div id="review-content"></div>
+            <button id="back-btn" class="industrial-btn">← VOLVER</button>
+        </div>
+    </div>
+
+
+    <script src= "script.js"></script>
 </body>
 </html>
