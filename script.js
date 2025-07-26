@@ -46,7 +46,7 @@
     let currentQuestion = 0;
     let score = 0;
     let selectedOption = null;
-    let userAnswers = []; // Para guardar el historial de respuestas
+    let userAnswers = []; 
 
     // Elementos del DOM
     const startBtn = document.getElementById('start-btn');
@@ -55,8 +55,8 @@
     const optionsContainer = document.getElementById('options-container');
     const currentQuestionElement = document.getElementById('current-question');
     const scoreElement = document.getElementById('score');
-    const reviewBtn = document.getElementById('review-btn'); // Botón de revisión
-    const backBtn = document.getElementById('back-btn'); // Botón para volver de revisión
+    const reviewBtn = document.getElementById('review-btn');
+    const backBtn = document.getElementById('back-btn'); /
 
     // Iniciar test
     startBtn.addEventListener('click', () => {
@@ -93,7 +93,7 @@
                 i++;
             } else {
                 clearInterval(typing);
-                nextBtn.disabled = false; //reactiva el boton
+                nextBtn.disabled = false; 
             }
         }, speed);
     }
@@ -157,8 +157,6 @@
     // mostrar promedio
     function showResult() {
         // Detener animación de escritura si existe
-        // Asegurarse de que typingAnimation esté definido globalmente si se usa fuera de typeWriter
-        // (No es estrictamente necesario aquí si typeWriter maneja su propio clearInterval)
         questionText.innerHTML = questions[questions.length - 1]?.question || ""; // Asegura que la última pregunta se vea al salir del quiz
 
         // Calcular resultados
@@ -171,7 +169,7 @@
         if (promedio >= 90) {
             mensaje = "¡Nivel experto!";
             emoji = "🏆";
-            // Efecto confeti (solo si saca +90%)
+            // Efecto confeti 
             const confettiScript = document.createElement('script');
             confettiScript.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js';
             document.body.appendChild(confettiScript);
@@ -191,7 +189,7 @@
             emoji = "💪";
         }
 
-        // HTML del resultado (con estilo industrial)
+        // HTML del resultado
         scoreElement.innerHTML = `
             <div class="result-header">
                 <span class="result-emoji">${emoji}</span>
