@@ -56,7 +56,7 @@
     const currentQuestionElement = document.getElementById('current-question');
     const scoreElement = document.getElementById('score');
     const reviewBtn = document.getElementById('review-btn');
-    const backBtn = document.getElementById('back-btn'); /
+    const backBtn = document.getElementById('back-btn'); 
 
     // Iniciar test
     startBtn.addEventListener('click', () => {
